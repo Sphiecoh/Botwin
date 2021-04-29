@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: FluentValidation
+    versions:
+    - 9.4.0
+    - 9.5.0
+  - dependency-name: Microsoft.AspNetCore.TestHost
+    versions:
+    - 5.0.2
+  - dependency-name: Microsoft.NET.Test.Sdk
+    versions:
+    - 16.8.3
